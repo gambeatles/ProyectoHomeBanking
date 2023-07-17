@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "bb174c9e-e273-402e-9abd-e7376fa51064",
+		"name": "Homebanking-23313",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6987519",
+		"_collection_link": "https://martian-star-383742.postman.co/workspace/Academia-Node~9c7cb669-cdf5-4a55-a97f-6b096e3c99e9/collection/6987519-bb174c9e-e273-402e-9abd-e7376fa51064?action=share&creator=6987519&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GET USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Cris\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 2,\n        \"username\": \"Lautaro22\",\n        \"password\": \"22\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/users/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "GET ACCOUNTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/accounts"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 1000000,\n    \"amount\": 10000.0,\n    \"owner\": {\n        \"id\": 1,\n        \"username\": \"Cris2\",\n        \"password\": \"1234\",\n        \"accounts\": null\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/accounts"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ACCOUNT BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/accounts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ACCOUNT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 2000000,\n    \"amount\": 45000.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/accounts/80"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ACCOUNT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/accounts/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transfers",
+			"item": [
+				{
+					"name": "GET TRANSFER BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/transfers/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GET TRANSFERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/transfers"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE TRANSFER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"origin\": 1,\n    \"target\": 2,\n    \"amount\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/transfers"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE TRANSFER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/transfers/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE TRANSFER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/transfers/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
